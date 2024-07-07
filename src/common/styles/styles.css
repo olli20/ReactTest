@@ -1,0 +1,15 @@
+/* @import url('../fonts/fonts.css'); */
+@import url('./normalize.css');
+
+:root {
+  --background: #ffffff;
+	--text: #161616;
+  
+  --logo-color1: #015457;
+  --logo-color2: #013b4b;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text);
+}

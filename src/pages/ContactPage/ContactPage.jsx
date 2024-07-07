@@ -2,7 +2,7 @@ import PageContainer from "../../common/components/PageContainer/PageContainer"
 
 const ContactPage = () => {
     return (
-        <PageContainer title="Contacts">
+        <PageContainer title="Feel free to contact me" description="Contacts">
         </PageContainer>
     );
 }

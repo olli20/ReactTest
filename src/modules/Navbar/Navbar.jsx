@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className={css.navbar}>
             <nav className={css.navbarContainer}>
-                <Link to={"/"} className={css.logo}>Olena Voina</Link> 
+                <Link to={"/"} className={css.logo}>Olena Voina</Link>
                 <ul className={css.menu}>
                     {menu}
                 </ul>

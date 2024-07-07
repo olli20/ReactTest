@@ -2,11 +2,11 @@
 @import url('./normalize.css');
 
 :root {
-  --background: #ffffff;
-	--text: #161616;
-  
-  --logo-color1: #015457;
-  --logo-color2: #013b4b;
+  --color-primary: #000000;
+  --color-secondary: #f0cb87;
+  --color-transparent: rgba(240, 203, 135, 0.2);
+  --background:  #ffffff;
+  --text: #4e4e4e;
 }
 
 body {

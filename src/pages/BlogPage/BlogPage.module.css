@@ -1,0 +1,35 @@
+.grid {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.gridItem {
+    display: flex;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .gridItem {
+        width: calc((100% - 25px) / 2);
+    }
+}
+
+.date {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: var(--color-secondary);
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.description {
+    margin-bottom: 20px;
+    font-size: 15px;
+}

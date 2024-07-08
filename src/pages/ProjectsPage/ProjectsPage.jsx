@@ -1,6 +1,9 @@
 import {Link, useLocation} from 'react-router-dom';
 import PageContainer from "../../common/components/PageContainer/PageContainer";
 import PostContainer from "../../common/components/PostContainer/PostContainer";
+import Button from '../../common/components/Button/Button';
+
+import { TbChevronsRight } from "react-icons/tb";
 
 import css from "./ProjectsPage.module.css";
 import projectsData from '../../data/projectsData';
@@ -8,19 +11,23 @@ import projectsData from '../../data/projectsData';
 const ProjectsPage = () => {
     const location = useLocation();
 
-    const projectsItems = projectsData.map(({id, title, description}) => (
-        <li key={id}>
+    const projectsItems = projectsData.map(({id, title, description, image}) => (
+        <li key={id} className={css.gridItem}>
             <PostContainer>
-                <h2>{title}</h2>
-                <p>{description}</p>
-                <Link state={{from: location}} to={`/projects/${id}`}>Read more</Link>
+                <Link state={{from: location}} to={`/projects/${id}`}>
+                    <img className={css.image} src={image}></img>
+                </Link>
+                <h2 className={css.title}>{title}</h2>
+                <Link state={{from: location}} to={`/projects/${id}`}>
+                    <Button>Read more<TbChevronsRight/></Button>
+                </Link>
             </PostContainer>
         </li>
     ))
 
     return (
-        <PageContainer title="Recent web-projects" description="Projects">
-            <ul className={css.projectsGrid}>
+        <PageContainer title="Recent projects" description="Projects">
+            <ul className={css.grid}>
                 {projectsItems}
             </ul>
         </PageContainer>

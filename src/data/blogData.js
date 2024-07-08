@@ -1,15 +1,15 @@
 const blogData = [
     {
-        id: "own-web-portfolio",
-        title: "Own Web Portfolio",
-        text: "I have statret working on my own online portfolio web-site. The very first version of it is already available.",
-        date: "8.07.2023",
+        id: "online-portfolio",
+        title: "Online Portfolio",
+        text: "I have started working on my own online portfolio website. The initial version is already available.",
+        date: "July 8, 2024",
     },
     {
         id: "fullstack-cetificate",
         title: "Fullstack Certificate",
-        text: "I am plaesed to inform, that I have eventualy recieved my Fullstack Developer Course at GoIT. It have been a long journey",
-        date: "20.06.2023",
+        text: "I am pleased to inform you that I have successfully completed my Fullstack Developer Course at GoIT. It has been a long and rewarding journey.",
+        date: "June 20, 2024",
     }
 ]
 

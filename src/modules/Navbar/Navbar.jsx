@@ -1,4 +1,6 @@
 import {Link, NavLink} from "react-router-dom";
+import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoLinkedin } from "react-icons/io5";
 
 import menuItems from './menuItems';
 import css from "./Navbar.module.css";
@@ -17,12 +19,18 @@ const Navbar = () => {
 
     return (
         <div className={css.navbar}>
-            <nav className={css.navbarContainer}>
-                <Link to={"/"} className={css.logo}>Olena Voina</Link>
-                <ul className={css.menu}>
-                    {menu}
+            <div className={css.navbarContainer}>
+                <nav className={css.menuContainer}>
+                    <Link to={"/"} className={css.logo}>Olena Voina</Link>
+                    <ul className={css.menu}>
+                        {menu}
+                    </ul>
+                </nav>
+                <ul className={css.media}>
+                    <li><a href="https://github.com/olli20" target="blank"><IoLogoGithub className={css.icon}/></a></li>
+                    <li><a href="https://www.linkedin.com/in/olena-voina/" target="blank"><IoLogoLinkedin className={css.icon}/></a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
     )
 }

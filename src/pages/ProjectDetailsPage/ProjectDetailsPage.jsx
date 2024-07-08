@@ -1,5 +1,7 @@
 import {useCallback} from 'react';
 import {useParams, useNavigate, useLocation} from 'react-router-dom';
+import { TbChevronLeft } from "react-icons/tb";
+import Button from '../../common/components/Button/Button';
 import PageContainer from "../../common/components/PageContainer/PageContainer"
 
 import projectsData from '../../data/projectsData';
@@ -17,7 +19,7 @@ const ProjectDetailsPage = () => {
 
     return (
         <PageContainer title={projectData.title} description="projects">
-            <button onClick={goBack}>Go back</button>
+            <Button onClick={goBack}><TbChevronLeft/>Go back</Button>
             <div>{projectData.text}</div>
         </PageContainer>
     )

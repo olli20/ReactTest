@@ -17,7 +17,9 @@ const ProjectsPage = () => {
                 <Link state={{from: location}} to={`/projects/${id}`}>
                     <img className={css.image} src={image}></img>
                 </Link>
-                <h2 className={css.title}>{title}</h2>
+                <Link state={{from: location}} to={`/projects/${id}`}>
+                    <h2 className={css.title}>{title}</h2>
+                </Link>
                 <Link state={{from: location}} to={`/projects/${id}`}>
                     <Button>Read more<TbChevronsRight/></Button>
                 </Link>

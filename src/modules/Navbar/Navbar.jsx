@@ -1,6 +1,5 @@
 import {Link, NavLink} from "react-router-dom";
-import { IoLogoGithub } from "react-icons/io5";
-import { IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
 import menuItems from './menuItems';
 import css from "./Navbar.module.css";

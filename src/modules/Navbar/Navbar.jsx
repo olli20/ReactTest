@@ -1,5 +1,6 @@
+import { useState } from "react";
 import {Link, NavLink} from "react-router-dom";
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin, IoMenu, IoClose } from "react-icons/io5";
 
 import menuItems from './menuItems';
 import css from "./Navbar.module.css";
@@ -10,27 +11,56 @@ const getClassList = ({isActive}) => {
 }
 
 const Navbar = () => {
-    const menu = menuItems.map(({id, to, text}) => (
+    const [mobileMenuVisibility, setMobileMenuVisibility] = useState(false);
+
+    const menu = menuItems.map(({ id, to, text }) => (
         <li key={id} className={css.item}>
-            <NavLink className={getClassList} to={to} >{text}</NavLink>     
+            <NavLink className={getClassList} to={to} onClick={() => setMobileMenuVisibility(false)}>
+                {text}
+            </NavLink>
         </li>
     ));
 
+    const toggleMenu = () => {
+        setMobileMenuVisibility(!mobileMenuVisibility);
+    }
+
     return (
-        <div className={css.navbar}>
-            <div className={css.navbarContainer}>
-                <nav className={css.menuContainer}>
+        <>
+            <div className={css.navbar}>
+                <div className={css.navbarContainer}>
                     <Link to={"/"} className={css.logo}>Olena Voina</Link>
-                    <ul className={css.menu}>
-                        {menu}
+                    <nav className={css.menuContainer}>
+                        <ul className={css.menu}>
+                            {menu}
+                        </ul>
+                    </nav>
+                    <ul className={css.media}>
+                        <li><a href="https://github.com/olli20" target="_blank" rel="noopener noreferrer"><IoLogoGithub className={css.icon} /></a></li>
+                        <li><a href="https://www.linkedin.com/in/olena-voina/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin className={css.icon} /></a></li>
                     </ul>
-                </nav>
-                <ul className={css.media}>
-                    <li><a href="https://github.com/olli20" target="blank"><IoLogoGithub className={css.icon}/></a></li>
-                    <li><a href="https://www.linkedin.com/in/olena-voina/" target="blank"><IoLogoLinkedin className={css.icon}/></a></li>
-                </ul>
+                    <button type="button" className={css.menuButton} onClick={toggleMenu}>
+                        <IoMenu className={css.icon} />
+                    </button>
+                </div>
             </div>
-        </div>
+            {mobileMenuVisibility &&
+                <div className={css.mobileMenu}>
+                    <button type="button" className={css.closeButton} onClick={toggleMenu}>
+                        <IoClose className={css.closeIcon} />
+                    </button>
+                    <nav>
+                        <ul className={css.mobileMenuList}>
+                            {menu}
+                        </ul>
+                    </nav>
+                    <ul className={css.mobileMedia}>
+                        <li><a href="https://github.com/olli20" target="_blank" rel="noopener noreferrer"><IoLogoGithub className={css.icon} /></a></li>
+                        <li><a href="https://www.linkedin.com/in/olena-voina/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin className={css.icon} /></a></li>
+                    </ul>
+                </div>
+            }
+        </>
     )
 }
 

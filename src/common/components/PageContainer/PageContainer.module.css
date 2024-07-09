@@ -29,3 +29,14 @@
     text-transform: uppercase;
     color: var(--color-transparent)
 }
+
+@media screen and (max-width: 600px) {
+    .description {
+        display: none;
+    }
+
+    .title {
+        margin-top: 50px;
+    }
+
+}

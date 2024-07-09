@@ -9,28 +9,37 @@
     margin-bottom: 10px;
     background-color: var(--background);
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-    z-index: 1000;
+    z-index: 500;
 }
 
 .navbarContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
 }
 
+@media screen and (min-width: 768px) {
+    .navbarContainer {
+        max-width: 1000px;
+        width: 100%;
+    }
+}
+
 .menuContainer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
-    margin-right: 60px;
+    display: block;
+    min-width: 150px;
+    margin-right: 20px;
     font-weight: 200;
     font-size: 24px;
     color: var(--text);
@@ -93,6 +102,82 @@
     color: var(--color-secondary);
 }
 
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
+@media screen and (max-width: 767px) {
+    .media {
+        display: none;
+    }
 
+    .menuContainer {
+        justify-content: flex-end;
+    }
+}
 
+@media screen and (max-width: 600px) {
+    .menuContainer {
+        display: none;
+    }
+
+    .menuButton {
+        display: block;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.mobileMenuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobileMenuList .item {
+    margin-bottom: 20px;
+}
+
+.mobileMedia {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.closeIcon {
+    font-size: 25px;
+    color: var(--text);
+    transition: all 0.3s ease-in-out;
+}
+
+.closeIcon:hover, .closeIcon:active {
+    color: var(--color-secondary);
+}

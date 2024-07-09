@@ -71,15 +71,12 @@ const encode = (data) => {
                     >
                         <input type="hidden" name="form-name" value="contact" />
                             <label className={css.label}>
-                                {/* <span>Name</span> */}
                                 <input type="text" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
                             </label>
                             <label className={css.label}>
-                                {/* <span>Email</span> */}
                                 <input type="email" name="email" placeholder="Your email"  value={formData.email} onChange={handleChange} required />
                             </label>
                             <label className={css.label}>
-                                {/* <span>Message</span> */}
                                 <textarea name="message" value={formData.message} placeholder="Message" onChange={handleChange} required />
                             </label>
                             <Button type="submit">Send</Button>

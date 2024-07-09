@@ -4,7 +4,7 @@ const blogData = [
         title: "Own Web Portfolio",
         image: null,
         text: "Today I started working on my online web portfolio. The initial version is already available.",
-        live: "https://olena-voina-web-portfolio.vercel.app/",
+        live: "https://olena-voina-portfolio.netlify.app/",
         git: "https://github.com/olli20/web-portfolio",
         file: null,
         date: "July 7, 2024",

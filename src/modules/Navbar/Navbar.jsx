@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {Link, NavLink} from "react-router-dom";
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { IoLogoGithub, IoLogoLinkedin, IoMenu, IoClose } from "react-icons/io5";
 
 import menuItems from './menuItems';
@@ -12,6 +13,14 @@ const getClassList = ({isActive}) => {
 
 const Navbar = () => {
     const [mobileMenuVisibility, setMobileMenuVisibility] = useState(false);
+
+    useEffect(() => {
+        if (mobileMenuVisibility) {
+            disableBodyScroll(document);
+        } else {
+            enableBodyScroll(document);
+        }
+    }, [mobileMenuVisibility]);
 
     const menu = menuItems.map(({ id, to, text }) => (
         <li key={id} className={css.item}>

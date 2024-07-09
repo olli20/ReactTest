@@ -58,4 +58,9 @@
         flex-direction:column-reverse;
         row-gap: 25px;
     }
+    
+    .image {
+        width: 100%;
+    }
+
 }

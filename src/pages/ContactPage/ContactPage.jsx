@@ -43,33 +43,34 @@ const encode = (data) => {
 
     return (
         <PageContainer title="Contacts" description="Contacts">
-            <ul className={css.container}>
-                <li className={css.listItem}>
-                    <a href="mailto:elena.voyna@gmail.com" target="_blank" className={css.link}>
-                        <IoMail className={css.icon} />elena.voyna(at)gmail.com
-                    </a>
-                </li>
-                <li className={css.listItem}>
-                    <a href="https://www.linkedin.com/in/olena-voina/" target="_blank" className={css.link}>
-                        <IoLogoLinkedin className={css.icon} />LinkedIn
-                    </a>
-                </li>
-                <li className={css.listItem}>
-                    <a href="https://github.com/olli20" target="_blank" className={css.link}>
-                        <IoLogoGithub className={css.icon} />GitHub
-                    </a>
-                </li>
-            </ul>
-            <div className={css.formContainer}>
-                <PostContainer>
-                    <p className={css.formTitle}>Send a message</p>
-                    <form 
-                        name="contact" 
-                        method="POST" 
-                        data-netlify="true" 
-                        onSubmit={handleSubmit}
-                    >
-                        <input type="hidden" name="form-name" value="contact" />
+            <div className={css.flexContainer}>
+                <ul className={css.contacts}>
+                    <li className={css.listItem}>
+                        <a href="mailto:elena.voyna@gmail.com" target="_blank" className={css.link}>
+                            <IoMail className={css.icon} />Send an Email
+                        </a>
+                    </li>
+                    <li className={css.listItem}>
+                        <a href="https://www.linkedin.com/in/olena-voina/" target="_blank" className={css.link}>
+                            <IoLogoLinkedin className={css.icon} />LinkedIn Profile
+                        </a>
+                    </li>
+                    <li className={css.listItem}>
+                        <a href="https://github.com/olli20" target="_blank" className={css.link}>
+                            <IoLogoGithub className={css.icon} />GitHub
+                        </a>
+                    </li>
+                </ul>
+                <div className={css.formContainer}>
+                    <PostContainer>
+                        <p className={css.formTitle}>Send a message</p>
+                        <form 
+                            name="contact" 
+                            method="POST" 
+                            data-netlify="true" 
+                            onSubmit={handleSubmit}
+                        >
+                            <input type="hidden" name="form-name" value="contact" />
                             <label className={css.label}>
                                 <input type="text" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
                             </label>
@@ -80,8 +81,9 @@ const encode = (data) => {
                                 <textarea name="message" value={formData.message} placeholder="Message" onChange={handleChange} required />
                             </label>
                             <Button type="submit">Send</Button>
-                    </form>
-                </PostContainer>
+                        </form>
+                    </PostContainer>
+                </div>
             </div>
         </PageContainer>
     );

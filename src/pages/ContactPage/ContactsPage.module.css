@@ -1,4 +1,18 @@
-.container {
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 850px) {
+    .flexContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.contacts {
+    min-width: 180px;
+    margin-right: 35px;
     margin-bottom: 25px;
 }
 
@@ -28,9 +42,10 @@
 }
 
 .formContainer {
-    max-width: 550px;
-    margin-bottom: 35px;
     width: 100%;
+    max-width: 650px;
+    margin-bottom: 35px;
+    
 }
 
 .formTitle {

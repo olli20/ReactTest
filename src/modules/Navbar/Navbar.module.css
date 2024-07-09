@@ -54,7 +54,7 @@
     padding-left: 0;
 }
 
-.item:not(:last-child) {
+.menu .item:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -136,19 +136,19 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--background);
-    z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .mobileMenuList {
-    list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mobileMenuList .item {

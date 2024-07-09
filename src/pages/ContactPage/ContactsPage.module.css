@@ -1,3 +1,7 @@
+.container {
+    margin-bottom: 25px;
+}
+
 .listItem {
     margin-bottom: 20px;
     color: var(--text);
@@ -21,4 +25,37 @@
     margin-right: 10px;
     font-size: 24px;
     color: inherit;
+}
+
+.formContainer {
+    max-width: 550px;
+    width: 100%;
+}
+
+.formTitle {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; 
+}
+
+.label input {
+    height: 36px;
+    padding: 7px 10px;
+    border: 1px solid #979797; 
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.label textarea {
+    min-height: 100px;
+    padding: 7px 10px;
+    border: 1px solid #979797; 
+    border-radius: 7px;
+    font-size: 14px;
+    resize: vertical;
 }

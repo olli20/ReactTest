@@ -1,10 +1,12 @@
 import { useState } from "react";
-import PageContainer from "../../common/components/PageContainer/PageContainer"
+import PageContainer from "../../common/components/PageContainer/PageContainer";
+import PostContainer from "../../common/components/PostContainer/PostContainer";
+import Button from "../../common/components/Button/Button";
+
 
 import { IoMail, IoLogoGithub, IoLogoLinkedin   } from "react-icons/io5";
 
 import css from "./ContactsPage.module.css";
-import PostContainer from "../../common/components/PostContainer/PostContainer";
 
 const encode = (data) => {
     return Object.keys(data)
@@ -58,34 +60,32 @@ const encode = (data) => {
                     </a>
                 </li>
             </ul>
-            <PostContainer>
-                <form 
-                    name="contact" 
-                    method="POST" 
-                    data-netlify="true" 
-                    onSubmit={handleSubmit}
-                >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p>
-                        <label>
-                            Your Name: <input type="text" name="name" value={formData.name} onChange={handleChange} />
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            Your Email: <input type="email" name="email" value={formData.email} onChange={handleChange} />
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            Message: <textarea name="message" value={formData.message} onChange={handleChange} />
-                        </label>
-                    </p>
-                    <p>
-                        <button type="submit">Send</button>
-                    </p>
-                </form>
-            </PostContainer>
+            <div className={css.formContainer}>
+                <PostContainer>
+                    <p className={css.formTitle}>Send a message</p>
+                    <form 
+                        name="contact" 
+                        method="POST" 
+                        data-netlify="true" 
+                        onSubmit={handleSubmit}
+                    >
+                        <input type="hidden" name="form-name" value="contact" />
+                            <label className={css.label}>
+                                {/* <span>Name</span> */}
+                                <input type="text" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
+                            </label>
+                            <label className={css.label}>
+                                {/* <span>Email</span> */}
+                                <input type="email" name="email" placeholder="Your email"  value={formData.email} onChange={handleChange} required />
+                            </label>
+                            <label className={css.label}>
+                                {/* <span>Message</span> */}
+                                <textarea name="message" value={formData.message} placeholder="Message" onChange={handleChange} required />
+                            </label>
+                            <Button type="submit">Send</Button>
+                    </form>
+                </PostContainer>
+            </div>
         </PageContainer>
     );
 }

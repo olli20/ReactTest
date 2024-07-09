@@ -26,7 +26,7 @@ const projectsData = [
         id: "ice-cream",
         title: "Responsive Website Ice Cream",
         image: "https://www.kolpakov.org/portfolio-images/ice-cream.JPG",
-        description: "Team project, Mai 2022",
+        description: "Team project, 2022",
         skills: ["JavaScript", "CSS"],
         live: "https://anastasiia-andrusenko.github.io/project14__ice-cream/",
         git: "https://github.com/Anastasiia-Andrusenko/project14__ice-cream",

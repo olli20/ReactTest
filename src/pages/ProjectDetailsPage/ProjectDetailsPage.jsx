@@ -26,7 +26,7 @@ const ProjectDetailsPage = () => {
     return (
         <PageContainer title={title} description="projects">
             <div className={css.container}>
-                <div>
+                <div className={css.textContent}>
                     <p className={css.description}>{description}</p>
                     <div className={css.text}>{text}</div>
                     <ul className={css.linksContainer}>

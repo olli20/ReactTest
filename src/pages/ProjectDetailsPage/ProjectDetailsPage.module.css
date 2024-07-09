@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    column-gap: 25px;
     width: 100%;
     margin-bottom: 25px;
 }
@@ -46,9 +47,15 @@
 }
 
 .image {
-    margin-left: 30px;
     width: 350px;
     border: 1px solid lightgray;
     border-radius: 7px;
     object-fit: contain;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction:column-reverse;
+        row-gap: 25px;
+    }
 }

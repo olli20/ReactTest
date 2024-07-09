@@ -5,6 +5,7 @@
     gap: 25px;
     padding: 0;
     margin: 0;
+    margin-bottom: 35px;
 }
 
 .gridItem {
@@ -28,6 +29,12 @@
 .title {
     margin-bottom: 20px;
     font-size: 18px;
+    color: var(--text);
+    transition: all 0.3s ease-in-out;
+}
+
+.title:hover, .title:active {
+    color: var(--color-secondary);
 }
 
 .description {

@@ -3,10 +3,10 @@
 
 :root {
   --color-primary: #000000;
-  --color-secondary: #f0cb87;
-  --color-transparent: rgba(240, 203, 135, 0.2);
+  --color-secondary: #0ec5a7;
+  --color-transparent: rgba(160, 160, 160, 0.1);
   --background:  #ffffff;
-  --text: #4e4e4e;
+  --text: #474747;
 }
 
 body {

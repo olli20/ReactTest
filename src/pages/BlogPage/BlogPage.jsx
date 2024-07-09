@@ -15,7 +15,9 @@ const BlogPage = () => {
     const blogItems = blogData.map(({id, title, text, date}) => (
         <li key={id} className={css.gridItem}>
             <PostContainer>
-                <h2 className={css.title}>{title}</h2>
+                <Link state={{from: location}} to={`/blog/${id}`}>
+                    <h2 className={css.title}>{title}</h2>
+                </Link>
                 <span className={css.date}>{date}</span>
                 <p className={css.description}>{text}</p>
                 <Link state={{from: location}} to={`/blog/${id}`}>

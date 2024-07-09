@@ -12,7 +12,7 @@ const encode = (data) => {
         .join("&");
   }
 
-const ContactPage = () => {
+  const ContactPage = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -39,21 +39,23 @@ const ContactPage = () => {
             .catch((error) => alert(error));
     };
 
-
     return (
         <PageContainer title="Contacts" description="Contacts">
             <ul className={css.container}>
                 <li className={css.listItem}>
                     <a href="mailto:elena.voyna@gmail.com" target="_blank" className={css.link}>
-                    <IoMail className={css.icon}/>elena.voyna(at)gmail.com</a>
+                        <IoMail className={css.icon} />elena.voyna(at)gmail.com
+                    </a>
                 </li>
                 <li className={css.listItem}>
                     <a href="https://www.linkedin.com/in/olena-voina/" target="_blank" className={css.link}>
-                    <IoLogoLinkedin  className={css.icon}/>LinkedIn</a>
+                        <IoLogoLinkedin className={css.icon} />LinkedIn
+                    </a>
                 </li>
                 <li className={css.listItem}>
                     <a href="https://github.com/olli20" target="_blank" className={css.link}>
-                    <IoLogoGithub className={css.icon}/>GitHub</a>
+                        <IoLogoGithub className={css.icon} />GitHub
+                    </a>
                 </li>
             </ul>
             <PostContainer>

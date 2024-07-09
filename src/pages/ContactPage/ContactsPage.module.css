@@ -12,17 +12,21 @@
 
 .contacts {
     min-width: 180px;
-    margin-right: 35px;
+    margin-right: 25px;
     margin-bottom: 25px;
 }
 
 .listItem {
-    margin-bottom: 20px;
+
     color: var(--text);
     transition: all 0.3s ease-in-out;
 }
 
-.listItem:hover {
+.listItem:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.listItem:hover, .listItem:active {
     color: var(--color-secondary);
 }
 
@@ -45,11 +49,11 @@
     width: 100%;
     max-width: 650px;
     margin-bottom: 35px;
-    
 }
 
 .formTitle {
     margin-bottom: 15px;
+    font-size: 16px;
     font-weight: 600;
 }
 

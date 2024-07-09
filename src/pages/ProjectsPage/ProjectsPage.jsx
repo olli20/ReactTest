@@ -21,7 +21,7 @@ const ProjectsPage = () => {
                     <h2 className={css.title}>{title}</h2>
                 </Link>
                 <Link state={{from: location}} to={`/projects/${id}`}>
-                    <Button>Read more<TbChevronsRight/></Button>
+                    <Button>Explore<TbChevronsRight/></Button>
                 </Link>
             </PostContainer>
         </li>

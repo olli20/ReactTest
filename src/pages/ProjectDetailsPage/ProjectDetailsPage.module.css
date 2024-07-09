@@ -13,6 +13,7 @@
 
 .text {
     margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .linksContainer {
@@ -27,13 +28,20 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    column-gap: 5px; 
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
+    color: var(--text);
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: var(--color-secondary);
 }
 
 .icon {
+    margin-right: 8px;
     font-size: 24px;
+    color: inherit;
 }
 
 .image {

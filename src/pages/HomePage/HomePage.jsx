@@ -1,9 +1,22 @@
-import PageContainer from "../../common/components/PageContainer/PageContainer"
+import {Link} from 'react-router-dom';
+
+import PageContainer from "../../common/components/PageContainer/PageContainer";
+import PostContainer from "../../common/components/PostContainer/PostContainer";
+
+import css from "./HomePage.module.css";
 
 const HomePage = () => {
     return (
-        <PageContainer title="My Online Portfolio" description="Welcome">
-            <div>Ich bin eine motivierte Frontend-Entwicklerin mit einem Hintergrund im Grafikdesign und einer soliden Grundlage in Webentwicklung. Ich strebe danach, innovative und benutzerfreundliche Weblösungen zu schaffen und meine Fähigkeiten in einem dynamischen Team als Trainee weiterzuentwickeln. Mein Ziel ist es, mich erfolgreich in den schweizerischen Arbeitsmarkt zu integrieren.</div>
+        <PageContainer title="Welcome to My Online Portfolio" description="Welcome">
+            <PostContainer>
+            <div className={css.intro}>
+                <p>I am glad to have you here!</p>
+                <p>This space is dedicated to highlighting my journey and work as a frontend developer.</p> 
+                <p>Focused on mastering new skills and best practices, I aim to deliver innovative and efficient 
+                web solutions. Here, you can explore my latest projects in the <Link to={"/projects"} className={css.link}>Projects section</Link> and keep 
+                up with my insights and updates in the <Link to={"/blog"} className={css.link}>Blog section</Link>.</p>
+            </div>
+            </PostContainer>
         </PageContainer>
     )
 }

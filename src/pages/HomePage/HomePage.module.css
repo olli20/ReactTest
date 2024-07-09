@@ -1,0 +1,20 @@
+.intro p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.intro p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.link {
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+    color: inherit;
+}
+
+.link:hover,
+.link.active {
+    color: var(--color-secondary)
+}

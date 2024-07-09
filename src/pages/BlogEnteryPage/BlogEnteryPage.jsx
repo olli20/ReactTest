@@ -28,14 +28,14 @@ const BlogEnteryPage = () => {
     if (live || git || file) {
         links = (
             <ul className={css.linksContainer}>
-                {git && 
-                    <li><a href={git} target="_blank" className={css.link}>
-                        <IoLogoGithub className={css.icon}/>Github</a>
-                    </li>
-                }
                 {live &&
                     <li><a href={live} target="_blank" className={css.link}>
-                        <IoEarthSharp className={css.icon}/>Live website</a>
+                        <IoEarthSharp className={css.icon}/>Live Website</a>
+                    </li>
+                }
+                {git && 
+                    <li><a href={git} target="_blank" className={css.link}>
+                        <IoLogoGithub className={css.icon}/>GitHub</a>
                     </li>
                 }
                 {file && 

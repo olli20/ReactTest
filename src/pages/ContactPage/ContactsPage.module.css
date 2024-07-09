@@ -1,0 +1,24 @@
+.listItem {
+    margin-bottom: 20px;
+    color: var(--text);
+    transition: all 0.3s ease-in-out;
+}
+
+.listItem:hover {
+    color: var(--color-secondary);
+}
+
+.link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: inherit;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: inherit;
+}

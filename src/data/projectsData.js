@@ -10,7 +10,7 @@ const projectsData = [
         skills: ["React", "JavaScript", "CSS"],
         live: "https://olehkotynskyi.github.io/TaskPro-FrontEnd-Team12",
         git: "https://github.com/OlehKotynskyi/TaskPro-FrontEnd-Team12/pulls?q=author%3Aolli20+",
-        text: "Task Pro is my latest team project, built using the React framework for the frontend and Node.js for the backend. As a frontend developer, I was responsible for creating several common components, modals, and tooltips, developing a custom date picker, and finalizing the layout of the sidebar. The site is fully responsive, designed to function seamlessly across mobile, tablet, and desktop devices. Collaborating on this project provided valuable experience in teamwork, component-based development, and handling various frontend challenges. Visit the site to see our work in action and explore how we brought our vision to life.",
+        text: "Task Pro is my latest team project, built using the React framework for the frontend and Node.js for the backend. As a frontend developer, I was responsible for creating several common components, modals, and tooltips, developing a custom date picker, and finalizing the layout of the sidebar. The site is fully responsive, designed to function across mobile, tablet, and desktop devices. Collaborating on this project provided me with valuable experience in teamwork, component-based development, and handling various frontend challenges.",
     },
     {
         id: "movie-search",

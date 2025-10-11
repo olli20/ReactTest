@@ -1,7 +1,10 @@
-:focus, :focus-visible {
-    outline: 3px solid rgb(121, 60, 195);
-    border-radius: 1px;
-    outline-offset: 2px; 
+:focus {
+    outline: none;
+}
+:focus-visible {
+    outline: 3px solid rgb(102, 166, 245);
+    border-radius: 2px;
+    outline-offset: 0px; 
 }
 
 .navbar {
@@ -13,7 +16,7 @@
     align-items: center;
     height: 90px;
     margin-bottom: 10px;
-    background-color: rgb(155, 205, 217);
+    background-color: rgb(227, 227, 227);
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     z-index: 500;
 }
@@ -61,7 +64,7 @@
 }
 
 .menu .item:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 24px;
 }
 
 .link {
@@ -91,13 +94,14 @@
 }
 
 .link:focus, .link:focus-visible {   
-    outline: 3px solid rgb(121, 60, 195);
+    outline: 3px solid rgb(102, 166, 245);
     border-radius: 5px;
     outline-offset: -3px;
 }
 
-.link.active:focus-visible {
-    outline: 3px solid rgb(121, 60, 195);
+.link.active:focus-visible, .link.active:focus {
+    outline: 3px solid rgb(102, 166, 245);
+    border-radius: 2px;
     outline-offset: 2px;
 }
 
